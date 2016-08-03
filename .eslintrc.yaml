@@ -1,0 +1,36 @@
+parser: "babel-eslint"
+extends:
+  - "airbnb"
+plugins:
+  - "class-property"
+env:
+  browser: true
+
+rules:
+  import/imports-first: 0
+
+  import/no-extraneous-dependencies: 0
+
+  react/jsx-filename-extension:
+    - 1
+    -
+      extensions:
+        - ".js"
+
+  import/no-unresolved: 0
+
+  import/no-commonjs: 2
+
+  key-spacing:
+    - 2
+    -
+      mode: "minimum"
+
+  class-property/class-property-semicolon: 2
+
+  react/prefer-stateless-function: 0
+
+  new-cap:
+    - 2
+    -
+      capIsNew: false
