@@ -1,5 +1,6 @@
 ## Ryde Client
 Code challenge to recreate a portion of the Uber driver dashboard
+![screenshot](screenshot.png)
 
 #### Install dependencies
 ```
