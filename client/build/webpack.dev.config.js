@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import base from './webpack.base.config';
+import path from 'path';
 
 export default {
   ...base,
@@ -7,7 +8,6 @@ export default {
   entry: [
     'webpack/hot/only-dev-server',
     'webpack-hot-middleware/client',
-    'react-hot-loader/patch',
     './client/src/dev.js',
     ...base.entry,
   ],
@@ -30,6 +30,11 @@ export default {
     ...base.module,
     loaders: [
       ...base.module.loaders,
+      {
+        test: /\.js$/,
+        loaders: ['react-hot', 'babel-loader'],
+        include: path.join(__dirname, '..', 'src'),
+      },
       {
         test: /\.css$/,
         loaders: [

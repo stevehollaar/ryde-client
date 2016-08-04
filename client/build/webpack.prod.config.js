@@ -51,6 +51,11 @@ export default {
     loaders: [
       ...base.module.loaders,
       {
+        test: /\.js$/,
+        loaders: ['babel-loader'],
+        include: path.join(__dirname, '..', 'src'),
+      },
+      {
         test: /\.css$/,
         loader: extractCss.extract(
           'style',

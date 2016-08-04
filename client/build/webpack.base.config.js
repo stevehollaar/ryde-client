@@ -21,13 +21,6 @@ export default {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loaders: [
-          'babel',
-        ],
-        include: path.join(__dirname, '..', 'src'),
-      },
-      {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
           'file?hash=sha512&digest=hex&name=[hash].[ext]',
