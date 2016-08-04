@@ -1,0 +1,9 @@
+.main {
+  display: inline-flex;
+  align-items: center;
+}
+
+.image {
+  width: 32px;
+  margin-right: 5px;
+}

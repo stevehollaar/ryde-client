@@ -1,0 +1,9 @@
+.app {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.header {
+  font-weight: 300;
+  margin: 25px 0;
+}

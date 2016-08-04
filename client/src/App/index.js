@@ -1,28 +1,22 @@
 import React, { PureComponent } from 'react';
 import TripDataProvider from 'TripDataProvider';
+import TripTable from 'TripTable';
+import CSSModules from 'react-css-modules';
+import styles from './styles.css';
 
+@CSSModules(styles)
 export default class App extends PureComponent {
-
-  constructor() {
-    super();
-    this.state = {
-      trips: null,
-
-    };
-  }
-
   render() {
     return (
-      <div>
-        <h1>My Trips</h1>
+      <div className={styles.app}>
+        <h1 className={styles.header}>My Trips</h1>
         <TripDataProvider>
-          {({ trips, isFetching }) => (
+          {({ trips, isFetching, isError }) => (
             <div>
               {isFetching ? 'Loading...' : null}
+              {isError ? 'Error loading trips.' : null}
               {trips ?
-                <pre>
-                  {JSON.stringify(trips, null, 2)}
-                </pre>
+                <TripTable trips={trips} />
               : null}
             </div>
           )}

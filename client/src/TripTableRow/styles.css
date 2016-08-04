@@ -1,0 +1,10 @@
+.cell {
+  padding: 5px;
+  font-weight: 300;
+}
+
+.rightCell {
+  composes: cell;
+
+  text-align: right;
+}

@@ -1,0 +1,42 @@
+.filterContainer {
+  text-align: center;
+  margin: 15px;
+}
+
+.filterInput {
+  margin: 0 10px;
+}
+
+.table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto  ;
+}
+
+.headerCell {
+  cursor: pointer;
+  text-align: left;
+  padding: 5px;
+  user-select: none;
+}
+
+.rightHeaderCell {
+  composes: headerCell;
+
+  text-align: right;
+}
+
+.sort {
+  width: 25px;
+  color: #ddd;
+  font-size: 12px;
+  display: inline-flex;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.sortActive {
+  composes: sort;
+
+  visibility: visible;
+}
