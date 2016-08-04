@@ -2,6 +2,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% if (!IS_DEV) { %>
+      <link href="/public/dist/main.css" rel="stylesheet" type="text/css" >
+    <% } %>
   </head>
   <body>
     <div id="app-mount"></div>
