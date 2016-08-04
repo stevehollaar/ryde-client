@@ -40,7 +40,9 @@ if (IS_DEV) {
 app.use('/public', express.static(`${__dirname}/public`));
 
 app.get('*', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    IS_DEV,
+  });
 });
 
 const server = app.listen(PORT, () => {

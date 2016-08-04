@@ -2,6 +2,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <% if (!IS_DEV) { %>
+      <link href="/public/dist/main.css" rel="stylesheet" type="text/css" >
+    <% } %>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
     <title>Ryde Client</title>
   </head>
